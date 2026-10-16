@@ -1,0 +1,2 @@
+Línea 1: Guarda tus claves secretas en un archivo .env en la raíz (ej. API_KEY=tu_token_privado) y añade la línea .env a tu .gitignore para que jamás se suba al repositorio público.
+Línea 2: Lee las claves exclusivamente en el servidor backend con process.env.API_KEY (Node.js) o $_ENV['API_KEY'] (PHP), creando endpoints intermedios hacia el frontend para nunca exponer tus credenciales en el navegador.

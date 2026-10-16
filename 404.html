@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404: Escena no encontrada | DL Media Pro</title>
+  <meta name="description" content="La página que buscas no existe o ha sido movida. Vuelve al inicio de DL Media Pro, productora audiovisual en Lima.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .error-wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 24px;
+      position: relative;
+      overflow: hidden;
+      background: radial-gradient(circle at 50% 30%, rgba(0, 229, 255, 0.08) 0%, rgba(18, 18, 18, 1) 70%);
+    }
+    .clapperboard-svg {
+      width: 140px;
+      height: 140px;
+      margin-bottom: 24px;
+      animation: float 4s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-10px) rotate(-3deg); }
+    }
+    .error-code {
+      font-family: var(--font-heading);
+      font-size: clamp(4rem, 12vw, 8rem);
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -0.04em;
+      background: linear-gradient(135deg, var(--cyan) 0%, #fff 50%, var(--orange) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 12px;
+    }
+    .error-tag {
+      display: inline-block;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: rgba(255, 94, 0, 0.15);
+      border: 1px solid rgba(255, 94, 0, 0.4);
+      color: var(--orange);
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .error-title {
+      font-family: var(--font-heading);
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 800;
+      margin: 0 0 16px;
+      color: #ffffff;
+    }
+    .error-desc {
+      color: var(--muted);
+      font-size: 1.1rem;
+      max-width: 540px;
+      margin: 0 auto 36px;
+      line-height: 1.6;
+    }
+    .error-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+    }
+    .btn-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--cyan);
+      color: #121212;
+      font-weight: 700;
+      padding: 14px 28px;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .btn-home:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(0, 229, 255, 0.3);
+    }
+    .btn-wa-alt {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--line);
+      color: #ffffff;
+      font-weight: 600;
+      padding: 14px 28px;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
+    .btn-wa-alt:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <main class="error-wrapper">
+    <!-- Ilustración Clapperboard de Producción Audiovisual -->
+    <svg class="clapperboard-svg" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="12" y="32" width="72" height="52" rx="10" fill="#1A1A1F" stroke="#00E5FF" stroke-width="2"/>
+      <path d="M12 40C12 36.6863 14.6863 34 18 34H78C81.3137 34 84 36.6863 84 40V46H12V40Z" fill="#23232A"/>
+      <!-- Franjas de claqueta -->
+      <path d="M22 34L32 46H24L14 34H22Z" fill="#00E5FF"/>
+      <path d="M38 34L48 46H40L30 34H38Z" fill="#00E5FF"/>
+      <path d="M54 34L64 46H56L46 34H54Z" fill="#00E5FF"/>
+      <path d="M70 34L80 46H72L62 34H70Z" fill="#00E5FF"/>
+      <!-- Símbolo de Play recortado en claqueta -->
+      <path d="M42 54L58 64L42 74V54Z" fill="#FF5E00"/>
+      <!-- Barra superior abierta con ángulo -->
+      <path d="M12 28L80 14" stroke="#FF5E00" stroke-width="5" stroke-linecap="round"/>
+    </svg>
+
+    <div class="error-tag">¡Corte! Escena fuera de cuadro</div>
+    <div class="error-code">404</div>
+    <h1 class="error-title">Esta toma quedó en la sala de edición</h1>
+    <p class="error-desc">
+      El enlace que abriste no existe, cambió de nombre o fue eliminado del montaje final. 
+      No te preocupes, volvamos al set principal para seguir creando contenido.
+    </p>
+
+    <div class="error-actions">
+      <a href="index.html" class="btn-home">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Volver al Inicio
+      </a>
+      <a href="https://wa.me/51936372861?text=Hola%20DL%20Media%20Pro%2C%20estaba%20navegando%20en%20la%20web%20y%20quiero%20cotizar%20un%20proyecto." target="_blank" rel="noopener noreferrer" class="btn-wa-alt">
+        Consultar por WhatsApp
+      </a>
+    </div>
+  </main>
+</body>
+</html>

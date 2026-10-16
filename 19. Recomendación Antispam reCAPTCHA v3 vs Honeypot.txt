@@ -1,0 +1,25 @@
+Veredicto Senior: Utiliza la técnica Honeypot como primera línea de defensa (o combinada con Cloudflare Turnstile).
+
+¿Por qué Honeypot primero? Cero fricción para el cliente (sin acertijos de semáforos ni scripts de 300KB de Google que ralenticen la web). Bloquea el 98% de bots automatizados que rastrean formularios.
+¿Cuándo usar reCAPTCHA v3 o Cloudflare Turnstile? Si sufres ataques de spam dirigidos. En ese caso, Cloudflare Turnstile es hoy superior a reCAPTCHA porque es gratuito, invisible, no rastrea datos de navegación del usuario y es mucho más ligero.
+
+Implementación rápida de Honeypot:
+
+Agrega un campo oculto que los humanos no ven, pero los bots completan automáticamente:
+
+HTML:
+<!-- Dentro de tu <form id="contact-form"> -->
+<div class="hp-check" aria-hidden="true" style="opacity: 0; position: absolute; top: 0; left: 0; height: 0; width: 0; z-index: -1;">
+  <label for="company_website_url">No llenar este campo si eres humano</label>
+  <input type="text" id="company_website_url" name="company_website_url" tabindex="-1" autocomplete="off">
+</div>
+
+JAVASCRIPT:
+
+// En tu validación JavaScript antes de enviar:
+const honeypot = document.getElementById('company_website_url');
+if (honeypot && honeypot.value !== '') {
+  // Es un bot automatizado: abortar silenciosamente
+  e.preventDefault();
+  return false;
+}

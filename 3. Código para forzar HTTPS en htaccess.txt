@@ -1,0 +1,22 @@
+Este bloque redirige cualquier petición HTTP insegura a HTTPS mediante un código de estado 301 (Moved Permanently) e incluye redirección canónica para unificar tu dominio (evitando contenido duplicado entre con y sin www).
+
+Ya lo tienes configurado en tu archivo .htaccess:
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # 1. Forzar HTTPS
+  RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # 2. Redirigir www a no-www (canónico)
+  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+</IfModule>
+
+# Cabecera HSTS para forzar conexiones seguras en el navegador durante 1 año
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+</IfModule>

@@ -1,0 +1,13 @@
+<!-- Texto para banner flotante inferior -->
+<div class="cookie-banner">
+  <p>
+    🍪 <strong>Cuidamos tu experiencia:</strong> Usamos cookies técnicas y métricas anónimas 
+    (Google Analytics) para entender qué videos te inspiran más y mejorar nuestro portafolio. 
+    Nunca venderemos tus datos ni te enviaremos spam. 
+    <a href="politica-de-privacidad.html" target="_blank" rel="noopener">Ver Política de Privacidad</a>.
+  </p>
+  <div class="cookie-actions">
+    <button id="accept-cookies-btn" class="btn-primary">Aceptar todas</button>
+    <button id="reject-cookies-btn" class="btn-secondary">Solo necesarias</button>
+  </div>
+</div>

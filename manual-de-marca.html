@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Manual de Marca | DL Media Pro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:ital,wght@0,600;0,700;0,800;0,900;1,800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#121212;--surface:#1a1a1f;--surface2:#23232a;--cyan:#00E5FF;--orange:#FF5E00;--text:#fff;--muted:rgba(255,255,255,.74);--line:rgba(255,255,255,.12);--h:'Montserrat',system-ui,sans-serif;--b:'Inter',system-ui,sans-serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:400 1rem/1.65 var(--b);-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,p,ul{margin:0}ul{padding:0;list-style:none}
+h1,h2,h3{font-family:var(--h)}
+.page{max-width:1080px;margin:0 auto;padding:4.5rem 2rem;border-bottom:1px solid var(--line)}
+.kicker{color:var(--cyan);font-weight:700;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:1rem}
+h1{font-size:clamp(2.8rem,7vw,5.5rem);font-weight:900;line-height:1;letter-spacing:-.04em}
+h2{font-size:clamp(2rem,4vw,3rem);font-weight:800;letter-spacing:-.03em;line-height:1.08;margin-bottom:1.2rem}
+h3{font-size:1.25rem;margin-bottom:.5rem}
+.lead{color:var(--muted);font-size:1.15rem;max-width:62ch;margin-top:1.2rem}
+.grid{display:grid;gap:1.2rem}.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:1.6rem}
+.card p,.card li{color:var(--muted);font-size:.97rem}
+.cover{min-height:92vh;display:grid;align-content:center;position:relative;overflow:hidden}
+.cover::before{content:"";position:absolute;width:520px;height:520px;right:-120px;top:-100px;background:rgba(0,229,255,.2);filter:blur(100px);border-radius:50%}
+.cover::after{content:"";position:absolute;width:420px;height:420px;left:-120px;bottom:-100px;background:rgba(255,94,0,.2);filter:blur(100px);border-radius:50%}
+.cover>*{position:relative;z-index:1}
+.logo{display:flex;align-items:center;gap:.9rem;font:800 1.7rem var(--h);letter-spacing:-.03em}
+.mark{display:grid;place-items:center;width:62px;height:56px;background:var(--cyan);color:var(--bg);border-radius:45% 55% 50% 40%;font-size:1.2rem;transform:rotate(-8deg)}
+.sw{border-radius:20px;overflow:hidden;border:1px solid var(--line);background:var(--surface)}
+.sw .c{height:130px;display:flex;align-items:flex-end;padding:1rem;font:800 1.1rem var(--h)}
+.sw .i{padding:1rem 1.2rem;font-size:.9rem;color:var(--muted)}.sw .i b{color:#fff;display:block;font-size:1rem}
+.bar{display:flex;height:56px;border-radius:14px;overflow:hidden;margin:1.4rem 0 .6rem}
+.type-spec{font-family:var(--h);font-weight:900;font-size:clamp(3rem,8vw,6rem);line-height:1;letter-spacing:-.04em}
+.row{display:grid;grid-template-columns:150px 1fr;gap:1.2rem;align-items:baseline;padding:1rem 0;border-top:1px solid var(--line)}
+.row small{color:var(--muted)}
+.btnx{display:inline-block;padding:.9rem 1.5rem;border-radius:999px;font-weight:700}
+.do,.dont{border-radius:20px;padding:1.4rem;border:1px solid var(--line)}
+.do{background:rgba(0,229,255,.07);border-color:rgba(0,229,255,.4)}
+.dont{background:rgba(255,107,107,.07);border-color:rgba(255,107,107,.4)}
+.do h3{color:var(--cyan)}.dont h3{color:#ff8f8f}
+li.t{padding:.35rem 0 .35rem 1.2rem;position:relative}li.t::before{content:"•";position:absolute;left:0;color:var(--orange)}
+table{width:100%;border-collapse:collapse;font-size:.95rem}
+th,td{text-align:left;padding:.9rem 1rem;border-top:1px solid var(--line);vertical-align:top}
+th{color:var(--cyan);font-family:var(--h);font-size:.9rem}
+td{color:var(--muted)}td:first-child{color:#fff;font-weight:600}
+.note{border-left:3px solid var(--orange);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin-top:1.4rem;font-size:.95rem}
+.print{position:fixed;right:1rem;top:1rem;z-index:10;background:var(--orange);color:var(--bg);border:0;border-radius:999px;padding:.8rem 1.3rem;font-weight:700;cursor:pointer;font-family:var(--b)}
+@media(max-width:800px){.g2,.g3,.g4{grid-template-columns:1fr}.row{grid-template-columns:1fr}}
+@media print{
+  @page{size:A4;margin:0}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .print{display:none}
+  .page{break-after:page;border:0;padding:2.2rem 2.4rem;max-width:none}
+  .cover{min-height:auto;height:297mm}
+  table,.card,.sw,.do,.dont{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<button class="print" onclick="window.print()">Guardar como PDF</button>
+
+<!-- PORTADA -->
+<section class="page cover">
+  <div class="logo"><span class="mark">DL</span>DL MEDIA PRO</div>
+  <h1 style="margin-top:3rem">Manual<br>de marca</h1>
+  <p class="lead">Guía de identidad, tipografías, color, voz, estrategia competitiva y plan SEO para Lima y todo el Perú.</p>
+  <p style="margin-top:2.5rem;color:var(--muted);font-size:.9rem">Versión 1.0 · Octubre 2026</p>
+</section>
+
+<!-- 1 ESENCIA -->
+<section class="page">
+  <p class="kicker">01 · Esencia</p>
+  <h2>Quiénes somos y cómo queremos que nos vean</h2>
+  <p class="lead">DL Media Pro es un estudio creativo peruano que combina criterio humano con inteligencia artificial para crear contenido que conecta y vende.</p>
+  <div class="grid g3" style="margin-top:2rem">
+    <div class="card"><h3>Propósito</h3><p>Que cualquier marca peruana, de Lima o de provincia, tenga contenido profesional que genere confianza y ventas.</p></div>
+    <div class="card"><h3>Promesa</h3><p>Contenido con estrategia detrás: cada gancho, corte y llamada a la acción tiene una razón de negocio.</p></div>
+    <div class="card"><h3>Personalidad</h3><p>Experta, cercana, ágil y clara. Seria en el trabajo, cálida en el trato. Tecnología con rostro humano.</p></div>
+  </div>
+  <div class="note">Psicología aplicada a la marca: <b style="color:#fff">autoridad</b> (explicamos el porqué), <b style="color:#fff">reciprocidad</b> (primera asesoría gratis), <b style="color:#fff">transparencia</b> (proceso en 4 pasos), <b style="color:#fff">cercanía</b> (WhatsApp directo y Mandi) y <b style="color:#fff">contraste</b> (comparativa frente a la agencia típica).</div>
+</section>
+
+<!-- 2 LOGO -->
+<section class="page">
+  <p class="kicker">02 · Logotipo</p>
+  <h2>La marca DL</h2>
+  <p class="lead">Una forma orgánica azul eléctrica con las iniciales DL, ligeramente inclinada, acompañada del nombre en Montserrat ExtraBold.</p>
+  <div class="grid g2" style="margin-top:2rem">
+    <div class="card" style="display:grid;place-items:center;min-height:200px"><div class="logo"><span class="mark">DL</span>DL MEDIA PRO</div></div>
+    <div class="card" style="display:grid;place-items:center;min-height:200px;background:#fff"><div class="logo" style="color:#121212"><span class="mark">DL</span>DL MEDIA PRO</div></div>
+  </div>
+  <div class="grid g2" style="margin-top:1.2rem">
+    <div class="do"><h3>Sí</h3><ul><li class="t">Usar sobre fondo grafito #121212 o blanco.</li><li class="t">Dejar libre alrededor un espacio equivalente a la altura de la “D”.</li><li class="t">Tamaño mínimo: 32 px de alto en pantalla.</li></ul></div>
+    <div class="dont"><h3>No</h3><ul><li class="t">Estirar, rotar más allá de la inclinación original o cambiar los colores.</li><li class="t">Poner el logo sobre fotos muy cargadas sin una capa oscura.</li><li class="t">Agregar sombras, brillos o contornos.</li></ul></div>
+  </div>
+</section>
+
+<!-- 3 COLOR -->
+<section class="page">
+  <p class="kicker">03 · Color</p>
+  <h2>Paleta de marca</h2>
+  <p class="lead">Se conserva tu paleta original, que ya funciona: el azul eléctrico comunica tecnología e IA; el naranja cítrico activa la acción. Se añadieron dos grises de apoyo para dar profundidad.</p>
+  <div class="grid g4" style="margin-top:2rem">
+    <div class="sw"><div class="c" style="background:#121212;border-bottom:1px solid var(--line)">Grafito</div><div class="i"><b>#121212</b>RGB 18 · 18 · 18<br>Fondo principal</div></div>
+    <div class="sw"><div class="c" style="background:#00E5FF;color:#121212">Azul eléctrico</div><div class="i"><b>#00E5FF</b>RGB 0 · 229 · 255<br>Tecnología, IA, enlaces</div></div>
+    <div class="sw"><div class="c" style="background:#FF5E00;color:#121212">Naranja cítrico</div><div class="i"><b>#FF5E00</b>RGB 255 · 94 · 0<br>Botones y acciones</div></div>
+    <div class="sw"><div class="c" style="background:#fff;color:#121212">Blanco</div><div class="i"><b>#FFFFFF</b>RGB 255 · 255 · 255<br>Títulos y lectura</div></div>
+  </div>
+  <div class="grid g2" style="margin-top:1.2rem">
+    <div class="sw"><div class="c" style="background:#1A1A1F;border-bottom:1px solid var(--line)">Superficie</div><div class="i"><b>#1A1A1F</b>Secciones alternas y tarjetas</div></div>
+    <div class="sw"><div class="c" style="background:#23232A;border-bottom:1px solid var(--line)">Superficie 2</div><div class="i"><b>#23232A</b>Elementos elevados y desplegables</div></div>
+  </div>
+  <h3 style="margin-top:2rem">Proporción de uso</h3>
+  <div class="bar"><div style="flex:60;background:#121212;border:1px solid var(--line)"></div><div style="flex:20;background:#1A1A1F"></div><div style="flex:12;background:#00E5FF"></div><div style="flex:8;background:#FF5E00"></div></div>
+  <p style="color:var(--muted);font-size:.9rem">≈ 60% grafito · 20% superficies · 12% azul · 8% naranja.</p>
+  <div class="note">Regla de contraste: sobre naranja y sobre azul usar texto grafito (#121212). Evitar texto blanco pequeño sobre naranja porque no cumple el contraste recomendado.</div>
+</section>
+
+<!-- 4 TIPOGRAFIA -->
+<section class="page">
+  <p class="kicker">04 · Brochure de fuentes</p>
+  <h2>Tipografías oficiales</h2>
+  <p class="lead">Se mantienen Montserrat e Inter: son gratuitas (Google Fonts), legibles en pantallas pequeñas y funcionan muy bien en Perú, donde gran parte del tráfico es móvil.</p>
+  <div class="grid g2" style="margin-top:2rem">
+    <div class="card"><p class="kicker" style="margin-bottom:.4rem">Títulos</p><div class="type-spec">Aa</div><h3 style="margin-top:1rem">Montserrat</h3><p>Pesos 700 · 800 · 900 y cursiva 800. Títulos, números, botones y logotipo.</p></div>
+    <div class="card"><p class="kicker" style="margin-bottom:.4rem">Texto</p><div class="type-spec" style="font-family:var(--b);font-weight:600">Aa</div><h3 style="margin-top:1rem">Inter</h3><p>Pesos 400 · 500 · 600 · 700. Párrafos, formularios, menús y subtítulos.</p></div>
+  </div>
+  <div class="card" style="margin-top:1.2rem">
+    <div class="row" style="border-top:0"><small>H1 · Montserrat 800<br>45–90 px</small><div style="font:800 2.6rem/1.05 var(--h);letter-spacing:-.035em">Contenido con IA que vende</div></div>
+    <div class="row"><small>H2 · Montserrat 800<br>34–64 px</small><div style="font:800 1.9rem/1.1 var(--h);letter-spacing:-.03em">Un proceso claro, sin sorpresas</div></div>
+    <div class="row"><small>H3 · Montserrat 700<br>20–40 px</small><div style="font:700 1.3rem var(--h)">Edición de video profesional</div></div>
+    <div class="row"><small>Texto · Inter 400<br>16–20 px</small><div style="color:var(--muted)">Creamos avatares, UGC, videos para redes y fotografía para marcas de Lima y de todo el Perú.</div></div>
+    <div class="row"><small>Botón · Inter 700<br>15–16 px</small><div><span class="btnx" style="background:var(--orange);color:#121212">Cotiza por WhatsApp</span></div></div>
+  </div>
+  <div class="note">Código para usar las fuentes: <code style="color:var(--cyan)">family=Inter:wght@400;500;600;700&amp;family=Montserrat:ital,wght@0,600;0,700;0,800;0,900;1,700;1,800</code></div>
+</section>
+
+<!-- 5 MANDI -->
+<section class="page">
+  <p class="kicker">05 · Mascota</p>
+  <h2>Mandi, la mandarina que te acompaña</h2>
+  <p class="lead">Es la frutita de la marca, ya presente en tu diseño original. Baja con el scroll por toda la página, saluda con mensajes según la sección y siempre lleva a WhatsApp. Es el rostro cercano de la marca. El nombre es una propuesta: puedes cambiarlo.</p>
+  <div class="grid g2" style="margin-top:2rem;align-items:center">
+    <div class="card" style="display:grid;place-items:center;min-height:240px">
+      <svg viewBox="0 0 80 80" width="180" height="180"><defs><radialGradient id="mg" cx=".35" cy=".3" r=".9"><stop offset="0" stop-color="#FFA766"/><stop offset=".6" stop-color="#FF5E00"/><stop offset="1" stop-color="#D94500"/></radialGradient></defs><ellipse cx="40" cy="75" rx="20" ry="3.5" fill="rgba(0,0,0,.35)"/><path d="M40 17c-2-7 2-12 10-13-1 6-4 11-10 13z" fill="#00E5FF"/><circle cx="40" cy="45" r="29" fill="url(#mg)"/><ellipse cx="30" cy="43" rx="3.2" ry="4.6" fill="#121212"/><ellipse cx="50" cy="43" rx="3.2" ry="4.6" fill="#121212"/><circle cx="31.2" cy="41.2" r="1.1" fill="#fff"/><circle cx="51.2" cy="41.2" r="1.1" fill="#fff"/><ellipse cx="22.5" cy="52" rx="5" ry="3" fill="#FF9B7A" opacity=".75"/><ellipse cx="57.5" cy="52" rx="5" ry="3" fill="#FF9B7A" opacity=".75"/><path d="M34 52q6 7 12 0" stroke="#121212" stroke-width="3" stroke-linecap="round" fill="none"/></svg>
+    </div>
+    <div class="card"><h3>Voz de Mandi</h3><ul><li class="t">Frases cortas, con un emoji como máximo.</li><li class="t">Ayuda primero, vende después.</li><li class="t">Ejemplo: “Elige un servicio y te abro WhatsApp con el mensaje listo 😉”.</li></ul></div>
+  </div>
+</section>
+
+<!-- 6 VOZ -->
+<section class="page">
+  <p class="kicker">06 · Voz y tono</p>
+  <h2>Cómo hablamos</h2>
+  <div class="grid g2" style="margin-top:1.6rem">
+    <div class="do"><h3>Hacemos</h3><ul><li class="t">Hablar claro y en segunda persona (“tú”).</li><li class="t">Botones con verbos concretos: “Cotiza por WhatsApp”.</li><li class="t">Explicar el porqué de cada decisión creativa.</li><li class="t">Prometer solo lo que podemos cumplir.</li></ul></div>
+    <div class="dont"><h3>Evitamos</h3><ul><li class="t">Frases infladas como “revolucionamos” o “los mejores” sin pruebas.</li><li class="t">Tecnicismos de IA que el cliente no pidió.</li><li class="t">Cifras o testimonios que no sean reales.</li><li class="t">Urgencia falsa (“últimos cupos”) si no es cierta.</li></ul></div>
+  </div>
+</section>
+
+<!-- 7 REDES -->
+<section class="page">
+  <p class="kicker">07 · Redes e íconos</p>
+  <h2>Botones sociales</h2>
+  <p class="lead">Cada red usa su color reconocible, para que el visitante identifique el canal al instante. Círculos de 42–48 px con elevación y giro suave al pasar el cursor.</p>
+  <div style="display:flex;gap:1rem;margin-top:1.6rem;flex-wrap:wrap">
+    <span style="width:56px;height:56px;border-radius:50%;background:linear-gradient(45deg,#f9a825,#ee2a7b 55%,#6228d7)"></span>
+    <span style="width:56px;height:56px;border-radius:50%;background:#000;box-shadow:-3px -3px 0 #25f4ee,3px 3px 0 #fe2c55"></span>
+    <span style="width:56px;height:56px;border-radius:50%;background:#1877f2"></span>
+    <span style="width:56px;height:56px;border-radius:50%;background:#ff0000"></span>
+    <span style="width:56px;height:56px;border-radius:50%;background:#25d366"></span>
+  </div>
+  <div class="note">Instagram, TikTok, Facebook, YouTube y WhatsApp. Si no usas alguna red, elimínala del HTML en vez de dejar el enlace vacío.</div>
+</section>
+
+<!-- 8 COMPETENCIA -->
+<section class="page">
+  <p class="kicker">08 · Análisis competitivo</p>
+  <h2>Debilidades típicas del mercado y cómo las aprovechamos</h2>
+  <p class="lead">Este cuadro resume patrones frecuentes en agencias de contenido y video de Lima, en base a prácticas comunes del sector.</p>
+  <div class="card" style="margin-top:1.6rem;padding:.4rem 1rem">
+    <table>
+      <tr><th>Debilidad frecuente</th><th>Cómo la resolvemos en DL Media Pro</th></tr>
+      <tr><td>Webs lentas, genéricas y sin una oferta clara</td><td>Un mensaje principal claro, servicios explicados en lenguaje simple y llamada a la acción en cada pantalla.</td></tr>
+      <tr><td>Poca prueba de confianza</td><td>Proceso transparente, comparativa, preguntas frecuentes y espacio para casos reales y reseñas verificables.</td></tr>
+      <tr><td>Contacto solo por formulario o correo</td><td>WhatsApp visible en toda la página, con mensaje prellenado por servicio.</td></tr>
+      <tr><td>SEO solo para “Lima”</td><td>Contenido orientado a Lima y provincias, datos estructurados con zonas de servicio y sección de cobertura.</td></tr>
+      <tr><td>Uso de IA como atajo, con resultados artificiales</td><td>IA con dirección creativa humana y revisión del estilo con el cliente antes de producir.</td></tr>
+      <tr><td>Entregan videos sin explicar el porqué</td><td>Cada pieza viene con la lógica del gancho y la llamada a la acción.</td></tr>
+    </table>
+  </div>
+  <div class="note"><b style="color:#fff">Importante:</b> este análisis es general. Para ganar posiciones conviene auditar a los 5 competidores que hoy aparecen para “agencia de contenido Lima”, “edición de video Lima” y “UGC Perú”: su velocidad, sus palabras clave, sus reseñas y sus precios. Con esos datos se puede afinar esta tabla.</div>
+</section>
+
+<!-- 9 SEO -->
+<section class="page">
+  <p class="kicker">09 · Plan SEO orgánico</p>
+  <h2>Posicionamiento en Lima y provincias</h2>
+  <div class="grid g2" style="margin-top:1.6rem">
+    <div class="card"><h3>Palabras clave principales</h3><ul><li class="t">agencia de contenido con IA en Lima</li><li class="t">edición de video Lima</li><li class="t">UGC Perú / UGC con IA</li><li class="t">avatares con IA Perú</li><li class="t">videos para TikTok para marcas</li><li class="t">fotografía de producto Lima</li></ul></div>
+    <div class="card"><h3>Ya incluido en la web</h3><ul><li class="t">Título y descripción optimizados (es-PE)</li><li class="t">Un solo H1 y jerarquía de títulos limpia</li><li class="t">Datos estructurados: negocio, servicios y preguntas frecuentes</li><li class="t">Sección de cobertura Lima + provincias</li><li class="t">sitemap.xml y robots.txt</li><li class="t">Carga rápida: sin imágenes pesadas ni librerías externas</li></ul></div>
+  </div>
+  <div class="card" style="margin-top:1.2rem"><h3>Lo que falta para posicionar (depende de ti)</h3><ul>
+    <li class="t"><b style="color:#fff">Dominio y hosting reales</b>: reemplaza dlmediapro.com si usas otro.</li>
+    <li class="t"><b style="color:#fff">Google Business Profile</b>: crea tu ficha (con Lima como zona de servicio) y pide reseñas reales a tus clientes.</li>
+    <li class="t"><b style="color:#fff">Search Console</b>: verifica el sitio y envía el sitemap.</li>
+    <li class="t"><b style="color:#fff">Casos reales</b>: sube tus videos y fotos con texto alternativo descriptivo.</li>
+    <li class="t"><b style="color:#fff">Blog o páginas por servicio</b>: ej. “Edición de video para marcas en Lima”, “UGC con IA para tiendas online”. Es la forma más efectiva de ganar posiciones en búsquedas específicas.</li>
+    <li class="t"><b style="color:#fff">Imagen para compartir</b>: crea assets/og-cover.jpg (1200×630).</li>
+  </ul></div>
+  <div class="note">El SEO orgánico toma meses y nadie puede garantizar el primer lugar. Lo que sí se puede hacer es construir una base técnica sólida y contenido útil constante.</div>
+</section>
+
+<!-- 10 CHECKLIST -->
+<section class="page">
+  <p class="kicker">10 · Antes de publicar</p>
+  <h2>Lista de pendientes</h2>
+  <div class="card"><ul>
+    <li class="t">Cambiar el número de WhatsApp en <b style="color:#fff">script.js</b> (CONFIG.whatsapp).</li>
+    <li class="t">Poner los enlaces reales de Instagram, TikTok, Facebook y YouTube en el HTML.</li>
+    <li class="t">Reemplazar los bloques de “Formatos” por tus videos y fotos reales.</li>
+    <li class="t">Confirmar que los compromisos escritos (respuesta en menos de 24 h, revisión antes de entregar, cobertura nacional) son ciertos.</li>
+    <li class="t">Añadir reseñas y logos de clientes solo cuando sean reales y autorizados.</li>
+    <li class="t">Actualizar el dominio en canonical, sitemap.xml y robots.txt.</li>
+  </ul></div>
+</section>
+</body>
+</html>

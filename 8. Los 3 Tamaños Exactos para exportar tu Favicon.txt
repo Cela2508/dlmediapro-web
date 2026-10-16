@@ -1,0 +1,15 @@
+Para garantizar compatibilidad universal sin sobrecargar tu web:
+
+favicon-32x32.png (y favicon-16x16.png o compilado en un solo favicon.ico):
+Uso: Pestañas de navegadores de escritorio (Chrome, Firefox, Edge, Safari), historial y favoritos.
+apple-touch-icon.png (180x180 px):
+Uso: Dispositivos Apple (iOS / Safari en iPhone y iPad) cuando el usuario ancla tu web a la pantalla de inicio o en favoritos de retina display.
+android-chrome-192x192.png (o formato vectorial moderno favicon.svg):
+Uso: Dispositivos Android, Google Chrome móvil y Web Manifest (PWA). El SVG adicional escala de forma infinita y soporta modo oscuro automático.
+
+Implementación en <head>:
+
+html
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">

@@ -1,0 +1,33 @@
+1. Enfoque Mobile-First: Diseña los estilos base para pantallas móviles pequeñas y escala hacia arriba con @media (min-width: ...):
+
+/* Estilos base: Móvil (< 640px) */
+.grid-services { display: flex; flex-direction: column; gap: 1.5rem; }
+
+/* Tablet (≥ 768px) */
+@media (min-width: 768px) {
+  .grid-services { display: grid; grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Desktop (≥ 1024px) */
+@media (min-width: 1024px) {
+  .grid-services { grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+}
+
+2. Tipografía y espaciados fluidos con clamp(): Evita cambios bruscos de tamaño de letra usando funciones fluidas:
+
+css
+/* Escala dinámicamente entre 2.2rem y 4.5rem según el ancho del viewport */
+h1 { font-size: clamp(2.2rem, 5vw + 1rem, 4.5rem); line-height: 1.1; }
+
+3. Áreas de pulsación mínimas (Touch Targets): Todo botón o enlace en móvil debe medir al menos 44x44 px (o min-height: 48px) para evitar clics accidentales con el pulgar.
+
+4. Prevención de Scroll Horizontal accidental:
+html, body {
+  max-width: 100%;
+  overflow-x: clip; /* Mejor que hidden para no romper position:sticky */
+}
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

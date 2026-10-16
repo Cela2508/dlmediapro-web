@@ -1,0 +1,6 @@
+# Sistema operativo y archivos basura de sincronización
+desktop.ini
+Thumbs.db
+.DS_Store
+*.tmp
+*.log

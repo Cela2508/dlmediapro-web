@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Evitar indexación de archivos y carpetas privadas o de assets sin valor SEO
+Disallow: /tmp/
+Disallow: /admin/
+Disallow: /*.json$
+
+# Ubicación del mapa del sitio
+Sitemap: https://dlmediapro.com/sitemap.xml

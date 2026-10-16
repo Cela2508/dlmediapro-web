@@ -1,0 +1,58 @@
+Este script previene envíos con espacios en blanco, verifica la estructura formal de correo y resalta visualmente el campo con error:
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('contact-form');
+  if (!form) return;
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+  form.addEventListener('submit', (e) => {
+    let isValid = true;
+
+    // 1. Validar campos requeridos que no estén vacíos
+    const requiredInputs = form.querySelectorAll('[required]');
+    requiredInputs.forEach((input) => {
+      const errorMsg = document.getElementById(`err-${input.name || input.id}`);
+      if (!input.value.trim()) {
+        isValid = false;
+        showFieldError(input, errorMsg, 'Este campo es obligatorio.');
+      } else {
+        clearFieldError(input, errorMsg);
+      }
+    });
+
+    // 2. Validar formato de email
+    const emailField = form.querySelector('input[type="email"]');
+    if (emailField && emailField.value.trim()) {
+      const errorMsg = document.getElementById(`err-${emailField.name || emailField.id}`);
+      if (!emailRegex.test(emailField.value.trim())) {
+        isValid = false;
+        showFieldError(emailField, errorMsg, 'Ingresa un correo electrónico válido (ej: nombre@empresa.com).');
+      }
+    }
+
+    if (!isValid) {
+      e.preventDefault(); // Detener envío si hay errores
+    }
+  });
+
+  function showFieldError(input, errorElement, message) {
+    input.classList.add('input-error');
+    input.setAttribute('aria-invalid', 'true');
+    if (errorElement) {
+      errorElement.textContent = message;
+      errorElement.style.display = 'block';
+    }
+  }
+
+  function clearFieldError(input, errorElement) {
+    input.classList.remove('input-error');
+    input.removeAttribute('aria-invalid');
+    if (errorElement) {
+      errorElement.textContent = '';
+      errorElement.style.display = 'none';
+    }
+  }
+});
