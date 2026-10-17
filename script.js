@@ -664,7 +664,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const win = window.open(fullUrl, "_blank", "noopener,noreferrer");
     if (!win || win.closed || typeof win.closed === "undefined") {
-      console.warn("Ventana emergente bloqueada. Utilizando enlace manual.");
+      // El navegador bloqueó el popup automático; el usuario tiene visible el botón manual
     }
   });
 
@@ -929,8 +929,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Guardar en almacenamiento local
     try {
       localStorage.setItem(`dl_reclamo_${folioCode}`, JSON.stringify(record));
-    } catch (e) {
-      console.warn("No se pudo almacenar en localStorage", e);
+    } catch (_) {
+      // Almacenamiento no disponible en navegación privada estricta
     }
 
     // Poblar Constancia Oficial

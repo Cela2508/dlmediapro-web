@@ -58,6 +58,19 @@ a {
   text-decoration: none;
 }
 
+/* ---------- Utilidad de Accesibilidad (Screen Reader Only) ---------- */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -377,8 +390,10 @@ nav#main-nav>a:not(.nav-contact):hover::after {
   background: none;
   border: 0;
   color: #fff;
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  min-height: 48px;
   cursor: pointer;
 }
 
@@ -707,8 +722,10 @@ nav#main-nav>a:not(.nav-contact):hover::after {
 }
 
 .sound-toggle-btn {
-  width: 32px;
-  height: 32px;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
   border-radius: 50%;
   background: rgba(18, 18, 18, 0.75);
   backdrop-filter: blur(8px);
@@ -2374,13 +2391,16 @@ select.invalid {
   border: 2px solid #1c1c24;
 }
 
-.chat-header h4 {
+.chat-header h4,
+.chat-header h3.chat-agent-title {
   font-size: 0.98rem;
   margin: 0;
   display: flex;
   align-items: center;
   gap: 0.45rem;
   color: #fff;
+  font-family: inherit;
+  font-weight: 700;
 }
 
 .badge-bot {
@@ -2405,7 +2425,9 @@ select.invalid {
   border: 0;
   color: var(--muted);
   cursor: pointer;
-  padding: 6px;
+  padding: 13px;
+  min-width: 44px;
+  min-height: 44px;
   border-radius: 50%;
   display: grid;
   place-items: center;
@@ -3168,8 +3190,10 @@ select.invalid {
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.15);
   color: #fff;
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
   border-radius: 50%;
   cursor: pointer;
   display: grid;
@@ -3536,10 +3560,12 @@ select.invalid {
   margin-top: 2px;
 }
 
-.constancia-alert-box h4 {
+.constancia-alert-box h4,
+.constancia-alert-box h3 {
   margin: 0 0 0.25rem;
   font-size: 0.95rem;
   color: #fff;
+  font-family: inherit;
 }
 
 .constancia-alert-box p {
@@ -3697,6 +3723,7 @@ select.invalid {
   }
 
   .constancia-alert-box h4,
+  .constancia-alert-box h3,
   .constancia-alert-box p {
     color: #000 !important;
   }

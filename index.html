@@ -22,7 +22,7 @@
   <!-- ===== SEO ===== -->
   <title>DL Media Pro | Agencia de Contenido con IA y Video en Lima</title>
   <meta name="description"
-    content="Agencia peruana de contenido con IA, videos para TikTok e Instagram, UGC, avatares con IA y fotografía de producto. Atendemos Lima y todo el Perú. Cotiza gratis por WhatsApp.">
+    content="Agencia audiovisual en Lima especializada en contenido con IA, videos para TikTok e Instagram, UGC y fotografía comercial. Cotiza gratis por WhatsApp.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="author" content="DL Media Pro">
   <meta name="theme-color" content="#121212">
@@ -111,12 +111,14 @@
   }
   </script>
 
-  <!-- Tipografías de marca -->
+  <!-- Tipografías de marca (Carga asíncrona no bloqueante para máximo rendimiento) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:ital,wght@0,600;0,700;0,800;0,900;1,700;1,800&display=swap"
-    rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap">
+  </noscript>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -376,6 +378,7 @@
 
     <!-- ===== CONFIANZA ===== -->
     <section class="trust" aria-label="Por qué confiar en DL Media Pro">
+      <h2 class="sr-only">Nuestros diferenciales y garantías</h2>
       <div class="trust-item reveal"><svg>
           <use href="#i-target" />
         </svg>
@@ -898,23 +901,23 @@
       <form id="contact-form" novalidate>
         <!-- Antispam Honeypot (campo trampa invisible para bots) -->
         <div class="hp-check" aria-hidden="true" style="opacity: 0; position: absolute; top: 0; left: 0; height: 0; width: 0; z-index: -1; pointer-events: none;">
-          <label for="company_website_url">No llenar este campo si eres humano</label>
+          <label for="company_website_url" class="sr-only">No llenar este campo si eres humano</label>
           <input type="text" id="company_website_url" name="company_website_url" tabindex="-1" autocomplete="off">
         </div>
 
-        <label>Tu nombre *
+        <label for="field-name">Tu nombre *
           <input name="name" id="field-name" type="text" placeholder="¿Cómo te llamas?" autocomplete="name" required>
           <span class="field-error-msg" id="err-name" aria-live="polite"></span>
         </label>
-        <label>Tu WhatsApp o Teléfono *
+        <label for="field-phone">Tu WhatsApp o Teléfono *
           <input name="phone" id="field-phone" type="tel" placeholder="Ej: 987 654 321" autocomplete="tel" required>
           <span class="field-error-msg" id="err-phone" aria-live="polite"></span>
         </label>
-        <label class="full-field">Tu empresa o marca
+        <label for="field-brand" class="full-field">Tu empresa o marca
           <input name="brand" id="field-brand" type="text" placeholder="Nombre de tu negocio o proyecto"
             autocomplete="organization">
         </label>
-        <label class="full-field">¿Qué servicio o paquete necesitas? *
+        <label for="field-service" class="full-field">¿Qué servicio o paquete necesitas? *
           <select name="service" id="field-service" required>
             <option value="" disabled selected>Selecciona una opción</option>
             <option value="Paquete básico de videos (S/ 850 - 7 a 15 videos)">Paquete básico de videos (S/ 850 - 7 a 15
@@ -930,7 +933,7 @@
           </select>
           <span class="field-error-msg" id="err-service" aria-live="polite"></span>
         </label>
-        <label class="full-field">Cuéntanos tu objetivo o requerimiento *
+        <label for="field-message" class="full-field">Cuéntanos tu objetivo o requerimiento *
           <textarea name="message" id="field-message"
             placeholder="¿Qué vendes, cuál es tu meta comercial y en qué ciudad estás?" rows="4" required></textarea>
           <span class="field-error-msg" id="err-message" aria-live="polite"></span>
@@ -1080,11 +1083,11 @@
             <legend class="libro-legend"><span class="legend-num">1</span> Identificación del Consumidor Reclamante
             </legend>
             <div class="libro-grid">
-              <label class="libro-field col-full">Nombre completo o Razón Social *
+              <label class="libro-field col-full" for="rec-nombre">Nombre completo o Razón Social *
                 <input type="text" name="rec_nombre" id="rec-nombre" required placeholder="Ej. Carlos Mendoza Ruiz">
                 <span class="field-error-msg" id="err-rec-nombre"></span>
               </label>
-              <label class="libro-field col-half">Tipo de Documento *
+              <label class="libro-field col-half" for="rec-tipo-doc">Tipo de Documento *
                 <select name="rec_tipo_doc" id="rec-tipo-doc" required>
                   <option value="DNI" selected>DNI (Documento Nacional de Identidad)</option>
                   <option value="CE">Carné de Extranjería (CE)</option>
@@ -1092,34 +1095,34 @@
                   <option value="Pasaporte">Pasaporte</option>
                 </select>
               </label>
-              <label class="libro-field col-half">Número de Documento *
+              <label class="libro-field col-half" for="rec-num-doc">Número de Documento *
                 <input type="text" name="rec_num_doc" id="rec-num-doc" required placeholder="Ej. 74839201">
                 <span class="field-error-msg" id="err-rec-num-doc"></span>
               </label>
-              <label class="libro-field col-half">Teléfono / WhatsApp de Contacto *
+              <label class="libro-field col-half" for="rec-telefono">Teléfono / WhatsApp de Contacto *
                 <input type="tel" name="rec_telefono" id="rec-telefono" required placeholder="Ej. 936372861">
                 <span class="field-error-msg" id="err-rec-telefono"></span>
               </label>
-              <label class="libro-field col-half">Correo Electrónico (para remitir constancia y respuesta legal) *
+              <label class="libro-field col-half" for="rec-email">Correo Electrónico (para remitir constancia y respuesta legal) *
                 <input type="email" name="rec_email" id="rec-email" required placeholder="tuemail@ejemplo.com">
                 <span class="field-error-msg" id="err-rec-email"></span>
               </label>
-              <label class="libro-field col-full">Domicilio Fiscal o Particular (Dirección, Distrito y Ciudad) *
+              <label class="libro-field col-full" for="rec-direccion">Domicilio Fiscal o Particular (Dirección, Distrito y Ciudad) *
                 <input type="text" name="rec_direccion" id="rec-direccion" required
                   placeholder="Ej. Av. Alfredo Benavides 1230, Santiago de Surco, Lima">
                 <span class="field-error-msg" id="err-rec-direccion"></span>
               </label>
               <div class="libro-field col-full menor-toggle-wrap">
-                <label class="checkbox-label">
+                <label class="checkbox-label" for="rec-es-menor">
                   <input type="checkbox" id="rec-es-menor" name="es_menor">
                   <span>Presento esta reclamación en representación de un menor de edad</span>
                 </label>
               </div>
               <div class="libro-grid col-full menor-fields" id="rec-menor-fields" style="display: none;">
-                <label class="libro-field col-half">Nombre del Padre / Madre o Tutor
+                <label class="libro-field col-half" for="rec-tutor-nombre">Nombre del Padre / Madre o Tutor
                   <input type="text" name="tutor_nombre" id="rec-tutor-nombre" placeholder="Nombre completo del tutor">
                 </label>
-                <label class="libro-field col-half">DNI / Documento del Tutor
+                <label class="libro-field col-half" for="rec-tutor-dni">DNI / Documento del Tutor
                   <input type="text" name="tutor_dni" id="rec-tutor-dni" placeholder="Número de documento">
                 </label>
               </div>
@@ -1133,25 +1136,25 @@
               <div class="libro-field col-full">
                 <span class="field-label-text">Tipo de Bien Contratado *</span>
                 <div class="radio-pill-group">
-                  <label class="radio-pill">
-                    <input type="radio" name="rec_bien_tipo" value="Servicio" checked>
+                  <label class="radio-pill" for="rec-bien-servicio">
+                    <input type="radio" name="rec_bien_tipo" id="rec-bien-servicio" value="Servicio" checked>
                     <span>Servicio (Videos con IA, UGC, Edición, Campaña de Ads)</span>
                   </label>
-                  <label class="radio-pill">
-                    <input type="radio" name="rec_bien_tipo" value="Producto">
+                  <label class="radio-pill" for="rec-bien-producto">
+                    <input type="radio" name="rec_bien_tipo" id="rec-bien-producto" value="Producto">
                     <span>Producto</span>
                   </label>
                 </div>
               </div>
-              <label class="libro-field col-half">Monto Reclamado (S/ o US$)
+              <label class="libro-field col-half" for="rec-monto">Monto Reclamado (S/ o US$)
                 <input type="text" name="rec_monto" id="rec-monto" placeholder="Ej. S/ 850.00">
               </label>
-              <label class="libro-field col-half">Servicio o Paquete Contratado *
+              <label class="libro-field col-half" for="rec-servicio">Servicio o Paquete Contratado *
                 <input type="text" name="rec_servicio" id="rec-servicio" required
                   placeholder="Ej. Paquete básico de 7 a 15 videos">
                 <span class="field-error-msg" id="err-rec-servicio"></span>
               </label>
-              <label class="libro-field col-full">Descripción o resumen del requerimiento contratado
+              <label class="libro-field col-full" for="rec-bien-desc">Descripción o resumen del requerimiento contratado
                 <textarea name="rec_bien_desc" id="rec-bien-desc" rows="2"
                   placeholder="Breve descripción del acuerdo comercial o servicio prestado"></textarea>
               </label>
@@ -1165,16 +1168,16 @@
               <div class="libro-field col-full">
                 <span class="field-label-text">Tipo de Afectación *</span>
                 <div class="radio-card-group">
-                  <label class="radio-card">
-                    <input type="radio" name="rec_tipo_afectacion" value="Reclamo" checked>
+                  <label class="radio-card" for="rec-afectacion-reclamo">
+                    <input type="radio" name="rec_tipo_afectacion" id="rec-afectacion-reclamo" value="Reclamo" checked>
                     <div class="radio-card-content">
                       <strong class="card-title">RECLAMO</strong>
                       <span class="card-desc">Disconformidad relacionada a los productos o servicios ofrecidos (ej.
                         entregables, plazos de producción, características del video).</span>
                     </div>
                   </label>
-                  <label class="radio-card">
-                    <input type="radio" name="rec_tipo_afectacion" value="Queja">
+                  <label class="radio-card" for="rec-afectacion-queja">
+                    <input type="radio" name="rec_tipo_afectacion" id="rec-afectacion-queja" value="Queja">
                     <div class="radio-card-content">
                       <strong class="card-title">QUEJA</strong>
                       <span class="card-desc">Malestar o descontento respecto a la atención al público (ej. trato al
@@ -1183,12 +1186,12 @@
                   </label>
                 </div>
               </div>
-              <label class="libro-field col-full">Detalle de los Hechos (Reclamación) *
+              <label class="libro-field col-full" for="rec-detalle">Detalle de los Hechos (Reclamación) *
                 <textarea name="rec_detalle" id="rec-detalle" rows="4" required
                   placeholder="Explica detalladamente lo ocurrido, fechas y motivos de tu disconformidad..."></textarea>
                 <span class="field-error-msg" id="err-rec-detalle"></span>
               </label>
-              <label class="libro-field col-full">Pedido Concreto del Consumidor *
+              <label class="libro-field col-full" for="rec-pedido">Pedido Concreto del Consumidor *
                 <textarea name="rec_pedido" id="rec-pedido" rows="3" required
                   placeholder="Indica concretamente la solución esperada (devolución, rectificación, ajuste de video, etc.)..."></textarea>
                 <span class="field-error-msg" id="err-rec-pedido"></span>
@@ -1198,7 +1201,7 @@
 
           <!-- Declaración y Marco Legal INDECOPI -->
           <div class="libro-legal-box">
-            <label class="checkbox-label veracidad-label">
+            <label class="checkbox-label veracidad-label" for="rec-veracidad">
               <input type="checkbox" name="rec_veracidad" id="rec-veracidad" required>
               <span>Declaro ser el titular del reclamo o representante acreditado y que los datos consignados son
                 verdaderos conforme a la Ley N° 29571. *</span>
@@ -1248,7 +1251,7 @@
           <div class="constancia-alert-box">
             <div class="constancia-alert-icon">✓</div>
             <div>
-              <h4>¡Tu reclamación ha sido registrada formalmente!</h4>
+              <h3>¡Tu reclamación ha sido registrada formalmente!</h3>
               <p>Conforme a la normativa de INDECOPI (Ley N° 29571 y Ley N° 31435), hemos registrado tu Hoja de
                 Reclamación. Recibirás respuesta formal en un plazo máximo de <strong>15 días hábiles
                   improrrogables</strong> a tu correo electrónico.</p>
@@ -1338,7 +1341,7 @@
           <span class="chat-status-dot" title="En línea"></span>
         </div>
         <div>
-          <h4>Mandi IA <span class="badge-bot">Asistente</span></h4>
+          <h3 class="chat-agent-title">Mandi IA <span class="badge-bot">Asistente</span></h3>
           <p>Especialista en Video, IA y Ads · DL Media Pro</p>
         </div>
       </div>
@@ -1389,6 +1392,7 @@
     <!-- Barra de envío y generación -->
     <div class="chat-footer">
       <form class="chat-input-bar" id="chat-form">
+        <label for="chat-input" class="sr-only">Escribe tu mensaje para Mandi IA</label>
         <input type="text" id="chat-input" placeholder="Pregúntame o dime qué producto vendes..." autocomplete="off"
           required>
         <button type="submit" id="chat-send-btn" aria-label="Enviar mensaje a Mandi">
@@ -1469,7 +1473,7 @@
     </div>
   </aside>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 
 </html>
