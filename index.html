@@ -6,6 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>document.documentElement.classList.add('js');</script>
 
+  <!-- Google tag (gtag.js) - Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YB2QXHWZLS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-YB2QXHWZLS', {
+      send_page_view: true,
+      cookie_flags: 'SameSite=None;Secure'
+    });
+  </script>
+
   <!-- ===== SEO ===== -->
   <title>DL Media Pro | Agencia de Contenido con IA y Video en Lima</title>
   <meta name="description"
@@ -19,17 +32,30 @@
   <meta name="geo.region" content="PE-LMA">
   <meta name="geo.placename" content="Santiago de Surco, Lima, Perú">
 
-  <!-- Open Graph / Twitter (TODO: crea assets/og-cover.jpg de 1200x630) -->
+  <!-- Open Graph / Redes Sociales / WhatsApp -->
   <meta property="og:type" content="website">
-  <meta property="og:locale" content="es_PE">
   <meta property="og:site_name" content="DL Media Pro">
-  <meta property="og:title" content="DL Media Pro | Contenido con IA y video para marcas en Perú">
+  <meta property="og:locale" content="es_PE">
+  <meta property="og:title" content="DL Media Pro | Productora Audiovisual y Contenido con IA en Lima">
   <meta property="og:description"
     content="Videos, UGC, avatares con IA y fotografía para que tu marca venda más. Lima y todo el Perú.">
   <meta property="og:url" content="https://dlmediapro.com/">
-  <meta property="og:image" content="https://dlmediapro.com/assets/og-cover.jpg">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:image" content="https://dlmediapro.com/img/og/og-cover.jpg">
+  <meta property="og:image:secure_url" content="https://dlmediapro.com/img/og/og-cover.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="DL Media Pro - Estudio de producción audiovisual en Lima">
 
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DL Media Pro | Productora Audiovisual y Contenido con IA">
+  <meta name="twitter:description" content="Videos de alto impacto, edición profesional y contenido comercial para redes en Lima, Perú.">
+  <meta name="twitter:image" content="https://dlmediapro.com/img/og/og-cover.jpg">
+
+  <!-- Favicons e Iconos -->
+  <link rel="icon" type="image/svg+xml" href="img/icons/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-touch-icon.png">
   <link rel="icon"
     href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23121212'/%3E%3Ccircle cx='32' cy='36' r='19' fill='%23FF5E00'/%3E%3Cpath d='M32 18c-1-6 2-9 8-10-1 5-3 8-8 10z' fill='%2300E5FF'/%3E%3C/svg%3E">
 
@@ -280,9 +306,9 @@
 
         <div class="phone" data-speed="0.05">
           <div class="screen phone-screen" id="hero-screen">
-            <!-- Espacio listo para tu video vertical: reemplaza o sube tu archivo a assets/demo-avatar.mp4 -->
+            <!-- Espacio listo para tu video vertical: sube tu archivo a img/hero/demo-avatar.mp4 -->
             <video class="hero-video" id="hero-video" playsinline muted loop autoplay preload="metadata">
-              <source src="assets/demo-avatar.mp4" type="video/mp4">
+              <source src="img/hero/demo-avatar.mp4" type="video/mp4">
             </video>
 
             <!-- Placeholder visual elegante mientras subes el video -->
@@ -292,7 +318,7 @@
                   <use href="#i-play" />
                 </svg></div>
               <p><strong>Espacio para tu Video de Avatar IA</strong><br><span>Formato vertical 9:16 (ej.
-                  assets/demo-avatar.mp4)</span></p>
+                  img/hero/demo-avatar.mp4)</span></p>
             </div>
 
             <div class="video-header-overlay">
@@ -603,16 +629,16 @@
       <div class="project-grid">
         <article class="project project-1">
           <div class="project-image project-media">
-            <!-- Espacio listo para video 1: reemplaza o sube tu archivo a assets/formato-ugc.mp4 -->
+            <!-- Espacio listo para video 1: sube tu archivo a img/portafolio/formato-ugc.mp4 -->
             <video class="format-video" playsinline muted loop preload="metadata" poster="">
-              <source src="assets/formato-ugc.mp4" type="video/mp4">
+              <source src="img/portafolio/formato-ugc.mp4" type="video/mp4">
             </video>
             <div class="media-placeholder">
               <div class="ph-icon"><svg>
                   <use href="#i-play" />
                 </svg></div>
               <p class="ph-title">Espacio para Video UGC con IA</p>
-              <span class="ph-sub">Formato vertical 9:16 (ej. assets/formato-ugc.mp4)</span>
+              <span class="ph-sub">Formato vertical 9:16 (ej. img/portafolio/formato-ugc.mp4)</span>
             </div>
             <a class="pill-link" href="#contacto" data-service-select="UGC con avatar IA">Cotizar este formato <svg>
                 <use href="#i-arrow" />
@@ -624,16 +650,16 @@
 
         <article class="project project-2">
           <div class="project-image project-media">
-            <!-- Espacio listo para video 2: reemplaza o sube tu archivo a assets/formato-reels.mp4 -->
+            <!-- Espacio listo para video 2: sube tu archivo a img/portafolio/formato-reels.mp4 -->
             <video class="format-video" playsinline muted loop preload="metadata" poster="">
-              <source src="assets/formato-reels.mp4" type="video/mp4">
+              <source src="img/portafolio/formato-reels.mp4" type="video/mp4">
             </video>
             <div class="media-placeholder">
               <div class="ph-icon"><svg>
                   <use href="#i-play" />
                 </svg></div>
               <p class="ph-title">Espacio para Video Reels / TikTok</p>
-              <span class="ph-sub">Formato vertical 9:16 (ej. assets/formato-reels.mp4)</span>
+              <span class="ph-sub">Formato vertical 9:16 (ej. img/portafolio/formato-reels.mp4)</span>
             </div>
             <a class="pill-link" href="#contacto" data-service-select="Videos para redes sociales">Cotizar este formato
               <svg>
@@ -646,16 +672,16 @@
 
         <article class="project project-3">
           <div class="project-image project-media">
-            <!-- Espacio listo para video 3 o fotografía de producto -->
+            <!-- Espacio listo para video 3 o fotografía de producto: sube tu archivo a img/portafolio/formato-producto.mp4 -->
             <video class="format-video" playsinline muted loop preload="metadata" poster="">
-              <source src="assets/formato-producto.mp4" type="video/mp4">
+              <source src="img/portafolio/formato-producto.mp4" type="video/mp4">
             </video>
             <div class="media-placeholder">
               <div class="ph-icon"><svg>
                   <use href="#i-camera" />
                 </svg></div>
               <p class="ph-title">Espacio para Fotografía o Video Comercial</p>
-              <span class="ph-sub">Muestra de producto o anuncio publicitario</span>
+              <span class="ph-sub">Muestra de producto o anuncio (ej. img/portafolio/formato-producto.mp4)</span>
             </div>
             <a class="pill-link" href="#contacto" data-service-select="Fotografía profesional">Cotizar este formato
               <svg>
@@ -870,6 +896,12 @@
       </div>
 
       <form id="contact-form" novalidate>
+        <!-- Antispam Honeypot (campo trampa invisible para bots) -->
+        <div class="hp-check" aria-hidden="true" style="opacity: 0; position: absolute; top: 0; left: 0; height: 0; width: 0; z-index: -1; pointer-events: none;">
+          <label for="company_website_url">No llenar este campo si eres humano</label>
+          <input type="text" id="company_website_url" name="company_website_url" tabindex="-1" autocomplete="off">
+        </div>
+
         <label>Tu nombre *
           <input name="name" id="field-name" type="text" placeholder="¿Cómo te llamas?" autocomplete="name" required>
           <span class="field-error-msg" id="err-name" aria-live="polite"></span>
@@ -1002,6 +1034,7 @@
   </footer>
 
   <!-- ===== MODAL: LIBRO DE RECLAMACIONES VIRTUAL (INDECOPI - LEY N° 29571) ===== -->
+  <div id="libro-reclamaciones" aria-hidden="true" tabindex="-1"></div>
   <div class="modal-libro-backdrop" id="modal-libro" role="dialog" aria-modal="true" aria-labelledby="libro-title"
     hidden>
     <div class="modal-libro-container">
@@ -1419,6 +1452,22 @@
     </svg>
     <span class="fab-text"><b>Escríbenos</b><small>Cotiza por WhatsApp</small></span>
   </a>
+
+  <!-- ===== BANNER DE COOKIES (Amigable y conforme a privacidad) ===== -->
+  <aside class="cookie-banner" id="cookie-banner" aria-label="Aviso de cookies" role="region" hidden>
+    <div class="cookie-banner-content">
+      <p class="cookie-text">
+        🍪 <strong>Cuidamos tu experiencia:</strong> Usamos cookies técnicas y métricas anónimas 
+        (Google Analytics) para entender qué contenidos te inspiran más y mejorar nuestro portafolio. 
+        Nunca venderemos tus datos. 
+        <a href="politica-de-privacidad.html" target="_blank" rel="noopener noreferrer">Ver Política de Privacidad</a>.
+      </p>
+      <div class="cookie-actions">
+        <button id="accept-cookies-btn" class="btn btn-primary btn-sm" type="button">Aceptar todas</button>
+        <button id="reject-cookies-btn" class="btn btn-secondary btn-sm" type="button">Solo necesarias</button>
+      </div>
+    </div>
+  </aside>
 
   <script src="script.js"></script>
 </body>

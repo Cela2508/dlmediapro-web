@@ -582,6 +582,13 @@ document.addEventListener("DOMContentLoaded", () => {
     if (successBox) successBox.hidden = true;
     if (generalErrorBox) generalErrorBox.hidden = true;
 
+    // Validación Antispam Honeypot
+    const honeypot = $("#company_website_url");
+    if (honeypot && honeypot.value.trim() !== "") {
+      if (successBox) successBox.hidden = false;
+      return;
+    }
+
     const data = new FormData(form);
     const name = (data.get("name") || "").toString().trim();
     const phone = (data.get("phone") || "").toString().trim();
@@ -976,4 +983,36 @@ document.addEventListener("DOMContentLoaded", () => {
   printConstanciaBtn?.addEventListener("click", () => {
     window.print();
   });
+
+  /* ---------- 13. Banner de Cookies con Persistencia en LocalStorage ---------- */
+  const cookieBanner = $("#cookie-banner");
+  const acceptCookiesBtn = $("#accept-cookies-btn");
+  const rejectCookiesBtn = $("#reject-cookies-btn");
+
+  try {
+    const cookieChoice = localStorage.getItem("dl_cookies_preference");
+    if (!cookieChoice && cookieBanner) {
+      cookieBanner.hidden = false;
+      requestAnimationFrame(() => cookieBanner.classList.add("is-visible"));
+    }
+  } catch (e) {
+    if (cookieBanner) cookieBanner.hidden = false;
+  }
+
+  const handleCookieConsent = (type) => {
+    try {
+      localStorage.setItem("dl_cookies_preference", type);
+    } catch (e) {
+      // Silencioso ante bloqueo de storage en modos de incógnito extremos
+    }
+    if (cookieBanner) {
+      cookieBanner.classList.remove("is-visible");
+      setTimeout(() => {
+        cookieBanner.hidden = true;
+      }, 350);
+    }
+  };
+
+  acceptCookiesBtn?.addEventListener("click", () => handleCookieConsent("all"));
+  rejectCookiesBtn?.addEventListener("click", () => handleCookieConsent("necessary"));
 });

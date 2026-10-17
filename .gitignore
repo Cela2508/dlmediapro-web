@@ -4,3 +4,7 @@ Thumbs.db
 .DS_Store
 *.tmp
 *.log
+
+# Entorno de agentes y reportes internos (no requeridos en el repositorio web de producción)
+.agents/
+arana/
