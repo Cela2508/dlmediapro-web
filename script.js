@@ -671,7 +671,6 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ---------- 12. Libro de Reclamaciones Virtual (INDECOPI - Ley N° 29571) ---------- */
   const modalLibro = $("#modal-libro");
   const openLibroBtn = $("#open-libro-btn");
-  const openLibroLink = $("#open-libro-link");
   const closeLibroBtn = $("#close-libro-btn");
   const cancelLibroBtn = $("#btn-cancel-libro");
   const closeConstanciaBtn = $("#btn-close-constancia");
@@ -738,11 +737,6 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   openLibroBtn?.addEventListener("click", (e) => {
-    e.preventDefault();
-    openLibroModal();
-  });
-
-  openLibroLink?.addEventListener("click", (e) => {
     e.preventDefault();
     openLibroModal();
   });

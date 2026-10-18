@@ -970,13 +970,62 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-brand-col">
+  <footer class="site-footer" id="site-footer">
+    <!-- Columna 1: Marca y Redes Sociales -->
+    <div class="footer-col footer-col-brand">
       <a class="brand" href="#inicio" aria-label="DL Media Pro - Inicio"><span class="brand-mark"
           aria-hidden="true">DL</span><span class="brand-name">DL MEDIA PRO</span></a>
-      <p>Estudio creativo peruano de contenido con IA, video y fotografía para marcas que quieren crecer.</p>
+      <p class="footer-desc">
+        Estudio creativo peruano de contenido con IA, video y fotografía para marcas que quieren crecer.
+      </p>
+      <div class="social footer-social" aria-label="Redes sociales de DL Media Pro">
+        <a class="soc soc-ig" href="https://www.instagram.com/dl.mediapro/" target="_blank" rel="noopener noreferrer"
+          aria-label="Instagram"><svg>
+            <use href="#i-ig" />
+          </svg></a>
+        <a class="soc soc-tt" href="https://www.tiktok.com/@dlmediapro" target="_blank" rel="noopener noreferrer"
+          aria-label="TikTok"><svg>
+            <use href="#i-tt" />
+          </svg></a>
+        <a class="soc soc-fb" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"
+          aria-label="Facebook"><svg>
+            <use href="#i-fb" />
+          </svg></a>
+        <a class="soc soc-yt" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"
+          aria-label="YouTube"><svg>
+            <use href="#i-yt" />
+          </svg></a>
+        <a class="soc soc-wa" href="https://wa.me/51936372861" target="_blank" rel="noopener noreferrer"
+          aria-label="WhatsApp"><svg>
+            <use href="#i-wa" />
+          </svg></a>
+      </div>
+    </div>
 
-      <!-- Badge Oficial del Libro de Reclamaciones -->
+    <!-- Columna 2: Navegación -->
+    <nav class="footer-col footer-col-nav" aria-label="Navegación principal del pie de página">
+      <h3 class="footer-col-title">Navegación</h3>
+      <ul class="footer-links">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#proceso">Proceso</a></li>
+        <li><a href="#cobertura">Cobertura</a></li>
+        <li><a href="#faq">Preguntas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <!-- Columna 3: Legal -->
+    <nav class="footer-col footer-col-nav" aria-label="Enlaces legales">
+      <h3 class="footer-col-title">Legal</h3>
+      <ul class="footer-links">
+        <li><a href="politica-de-privacidad.html">Privacidad</a></li>
+        <li><a href="terminos-y-condiciones.html">Términos</a></li>
+      </ul>
+    </nav>
+
+    <!-- Columna 4: Atención al Consumidor / Libro de Reclamaciones INDECOPI -->
+    <div class="footer-col footer-col-consumer">
+      <h3 class="footer-col-title">Atención al Consumidor</h3>
       <div class="footer-libro-wrap">
         <button type="button" class="libro-badge" id="open-libro-btn" aria-label="Abrir Libro de Reclamaciones Virtual">
           <div class="libro-badge-icon">
@@ -992,42 +1041,8 @@
         </button>
       </div>
     </div>
-    <nav class="footer-nav" aria-label="Enlaces del pie de página">
-      <a href="#servicios">Servicios</a>
-      <a href="#proceso">Proceso</a>
-      <a href="#cobertura">Cobertura</a>
-      <a href="#faq">Preguntas</a>
-      <a href="#contacto">Contacto</a>
-      <a href="politica-de-privacidad.html">Privacidad</a>
-      <a href="terminos-y-condiciones.html">Términos</a>
-      <a href="#libro-reclamaciones" id="open-libro-link" class="libro-nav-link">
-        <svg class="nav-book-icon" aria-hidden="true">
-          <use href="#i-book" />
-        </svg> Libro de Reclamaciones
-      </a>
-    </nav>
-    <div class="social">
-      <a class="soc soc-ig" href="https://www.instagram.com/dl.mediapro/" target="_blank" rel="noopener noreferrer"
-        aria-label="Instagram"><svg>
-          <use href="#i-ig" />
-        </svg></a>
-      <a class="soc soc-tt" href="https://www.tiktok.com/@dlmediapro" target="_blank" rel="noopener noreferrer"
-        aria-label="TikTok"><svg>
-          <use href="#i-tt" />
-        </svg></a>
-      <a class="soc soc-fb" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"
-        aria-label="Facebook"><svg>
-          <use href="#i-fb" />
-        </svg></a>
-      <a class="soc soc-yt" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"
-        aria-label="YouTube"><svg>
-          <use href="#i-yt" />
-        </svg></a>
-      <a class="soc soc-wa" href="https://wa.me/51936372861" target="_blank" rel="noopener noreferrer"
-        aria-label="WhatsApp"><svg>
-          <use href="#i-wa" />
-        </svg></a>
-    </div>
+
+    <!-- Barra Inferior Legal (Sub-footer) -->
     <div class="footer-bottom">
       <p class="copyright">© <span id="year">2026</span> DL Media Pro · Santiago de Surco, Lima, Perú. Todos los
         derechos reservados.</p>
@@ -1416,7 +1431,7 @@
       </svg>
     </button>
     <button class="buddy" id="buddy" type="button" aria-label="Abrir chat interactivo con Mandi IA">
-      <span class="buddy-pill-label">Chat con IA</span>
+      <span class="buddy-pill-label">Pregúntame</span>
       <span class="buddy-bubble" id="buddy-bubble" aria-hidden="true"></span>
       <span class="buddy-inner" id="buddy-inner">
         <svg viewBox="0 0 80 80" class="buddy-svg" aria-hidden="true">
@@ -1428,7 +1443,7 @@
             </radialGradient>
           </defs>
           <ellipse cx="40" cy="75" rx="20" ry="3.5" fill="rgba(0,0,0,.35)" />
-          <path d="M40 17c-2-7 2-12 10-13-1 6-4 11-10 13z" fill="#00E5FF" />
+          <path class="buddy-leaf" d="M40 17c-2-7 2-12 10-13-1 6-4 11-10 13z" fill="#00E5FF" />
           <circle cx="40" cy="45" r="29" fill="url(#mandi-g)" stroke="none" />
           <ellipse class="mandi-eye" cx="30" cy="43" rx="3.2" ry="4.6" fill="#121212" />
           <ellipse class="mandi-eye" cx="50" cy="43" rx="3.2" ry="4.6" fill="#121212" />
